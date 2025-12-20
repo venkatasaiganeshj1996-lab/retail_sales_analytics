@@ -71,6 +71,21 @@ All queries are written with **business understanding**, not just syntax.
 
 ---
 
+---
+
+## 📊 Tableau Integration
+
+For visualization purposes, a **flat (denormalized) dataset** is prepared using SQL joins.
+This dataset is specifically created for Tableau reporting to simplify analysis and
+avoid complex joins inside Tableau.
+
+The flat-table SQL query used for Tableau is included in the project as:
+**Part 8: Flat Table for Tableau Reporting**.
+
+This approach reflects common BI practice where:
+- SQL is used for data preparation
+- Tableau is used for visualization
+
 ## 🗂 Project Structure
 
 | File | Description |
