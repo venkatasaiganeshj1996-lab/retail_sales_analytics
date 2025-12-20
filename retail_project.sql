@@ -303,3 +303,41 @@ JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 GROUP BY o.order_id
 HAVING SUM(oi.quantity * p.price) > 50000;
+
+/* ==========================================
+   PART 8: FLAT TABLE FOR TABLEAU REPORTING
+   ==========================================
+   Purpose:
+   This query prepares a flattened dataset for Tableau.
+   Instead of creating joins inside Tableau, data is
+   pre-joined in SQL for easier visualization.
+
+   This is a common BI practice where:
+   - SQL is used for data preparation
+   - Tableau is used for visualization
+   ========================================== */
+
+SELECT
+    o.order_id,
+    o.order_date,
+
+    c.customer_id,
+    c.name AS customer_name,
+    c.city,
+
+    p.product_id,
+    p.product_name,
+    p.category,
+
+    oi.quantity,
+    p.price,
+
+    (oi.quantity * p.price) AS sales
+FROM orders o
+JOIN customers c
+    ON o.customer_id = c.customer_id
+JOIN order_items oi
+    ON o.order_id = oi.order_id
+JOIN products p
+    ON oi.product_id = p.product_id
+ORDER BY o.order_date, o.order_id;
