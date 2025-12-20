@@ -193,11 +193,8 @@ FROM (
 ) t
 WHERE rn = 1;
 
-
-
-
 /* ==========================================
-   PART 5: INTERVIEW-SAFE ADVANCED QUERIES
+   PART 5: PRACTICAL BUSINESS SCENARIOS
    ========================================== */
 
 -- Q9: Customers with NO orders (LEFT JOIN)
@@ -207,7 +204,6 @@ SELECT
 FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id
 WHERE o.order_id IS NULL;
-
 
 -- Q10: Products never sold
 SELECT
