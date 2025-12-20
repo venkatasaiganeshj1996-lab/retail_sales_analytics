@@ -1,78 +1,108 @@
 # Retail Sales Analytics System (SQL Project)
 
-A complete, professional SQL project designed for Data Analyst & Business Analyst interviews.
+A beginner-friendly SQL Server project created to demonstrate **core SQL concepts** commonly required for **Data Analyst / Business Analyst (Fresher)** roles.
 
-This project demonstrates relational database design, analytical SQL skills, business insights, and professional SQL practices.
-
----
-
-## 📦 Database Design (4 Tables)
-
-- **Customers** – customer information  
-- **Products** – product catalog  
-- **Orders** – order-level data  
-- **Order_Items** – item-level order transactions  
-
-Database includes:
-- Primary keys  
-- Foreign keys  
-- Constraints  
-- Normalized retail structure  
+This project focuses on **clean database design**, **practical analytical queries**, and **real business-style questions**, without unnecessary complexity.
 
 ---
 
-## 📊 Key Analytical Skills Demonstrated
+## 📦 Database Design
 
-### ✔ Joins & Aggregations
-Revenue, customer spending, product performance.
+The project uses a **normalized retail database** with 4 tables:
 
-### ✔ Window Functions
-Ranking customers by revenue, highest-value orders.
+- **Customers** – customer details (name, city, email)
+- **Products** – product catalog with category and price
+- **Orders** – order header information
+- **Order_Items** – line-level order transactions
 
-### ✔ CTE (Common Table Expressions)
-Monthly revenue calculations.
+### Design Highlights
+- Primary Keys & Foreign Keys
+- Basic constraints (NOT NULL, CHECK)
+- One-to-many relationships
+- Realistic retail schema used in interviews
+
+---
+
+## 📊 SQL Skills Demonstrated
+
+### ✔ Core SQL
+- `SELECT`, `WHERE`, `GROUP BY`, `HAVING`
+- `ORDER BY`
+- Aggregate functions (`SUM`, `AVG`, `COUNT`)
+
+### ✔ Joins
+- `INNER JOIN`
+- `LEFT JOIN`
+- Multi-table joins (4-table queries)
+
+### ✔ Subqueries
+- Orders above average value
+- Nested aggregations
+
+### ✔ Window Functions (SQL Server)
+- `RANK()` for customer ranking
+- `ROW_NUMBER()` to find highest-value order per customer
+
+### ✔ Conditional Logic
+- `CASE WHEN` for customer segmentation
+
+### ✔ EXISTS
+- Customer purchase behavior analysis
 
 ### ✔ Views
-Reusable customer-spend summary.
+- Reusable customer sales summary view
 
-### ✔ Stored Procedure
-Reusable customer order report.
-
-### ✔ CTAS
-Creation of new analytics table (high-value orders).
+### ✔ CTAS (Create Table As Select)
+- High-value orders table for reporting
 
 ---
 
-## 📈 Business Insights Generated
+## 📈 Business Questions Answered
 
-- Top-spending customers  
-- Monthly revenue trends  
-- Best-selling products  
-- High-value orders  
-- Customer-wise revenue contribution  
+- What is the total value of each order?
+- Who are the top-spending customers?
+- Which products and categories generate the most revenue?
+- How does revenue vary by customer city?
+- What are monthly revenue trends?
+- Which customers place repeat or high-value orders?
+- Which products or customers are inactive?
 
-These insights represent real business use cases in retail analytics.
+All queries are written with **business understanding**, not just syntax.
 
 ---
 
-## 📂 Project Structure
+## 🗂 Project Structure
 
 | File | Description |
-|------|-------------|
-| `retail_project.sql` | Full SQL schema, sample data, queries, view, procedure |
-| `README.md` | Project explanation (you are reading this) |
+|------|------------|
+| `retail_project.sql` | Table creation, sample data, analytical queries |
+| `README.md` | Project explanation |
 
 ---
 
-## 🚀 How to Use
+## 🛠 Tools Used
 
-1. Copy the SQL file into MySQL, PostgreSQL, or DB-Fiddle.  
-2. Run schema creation.  
-3. Insert sample data.  
-4. Run analysis queries to generate insights.  
+- **SQL Server** (syntax aligned)
+- **DB-Fiddle / GitHub** for hosting queries
+- **Tableau Public** (basic dashboard for visualization)
+
+> Note: This project is intentionally kept **simple and clear**, suitable for a fresher-level role.
 
 ---
 
-## 👤 Author  
+## 🚀 How to Run
+
+1. Open SQL Server / DB-Fiddle (SQL Server mode)
+2. Run table creation scripts
+3. Insert sample data
+4. Execute analytical queries section-wise
+
+---
+
+## 👤 Author
+
 **Ganesh J**  
-Data Analyst (Fresher) | SQL | Excel | Power BI | Python (Basics)
+Aspiring Data Analyst (Fresher)  
+Skills: SQL Server, Excel, Tableau (Basics)
+
+---
